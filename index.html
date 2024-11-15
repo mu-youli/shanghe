@@ -1,0 +1,2031 @@
+<!doctype html>
+<html>
+ <head> 
+  <!-- 启用极速模式(webkit) 911--> 
+  <meta name="renderer" content="webkit"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <meta name="format-detection" content="telephone=no"> 
+  <meta name="referrer" content="no-referrer-when-downgrade"> 
+  <meta name="keywords" content="上海合作组织国家数字科技平台、上合组织国家数字科技平台、SCODTP"> 
+  <meta name="description" content="构建国际平台，促进国际合作"> 
+  <title>上海合作组织国家数字科技平台</title> 
+  <link rel="shortcut icon" type="image/x-icon" href="css/favicon.ico"> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <meta name="apple-touch-fullscreen" content="yes"> 
+  <meta name="full-screen" content="yes"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" id="headScreen"> 
+  <!-- SEO友好提示1 --> 
+  <meta name="applicable-device" content="pc,mobile"> 
+  <!--[if lt IE 9]>
+<script type="text/javascript" src="/js/comm/html5shiv.js"></script>
+<script type="text/javascript" src="/js/comm/respond.min.js"></script>
+<![endif]--> 
+  <script type="text/javascript" src="js/jquery.min.js"></script> 
+  <script type="text/javascript" src="js/jquery.lazyload.min.js"></script> 
+  <script type="text/javascript" src="js/jquery.nicescroll.min.js"></script> 
+  <script type="text/javascript" src="js/ubox.js" charset="utf-8"></script> 
+  <script type="text/javascript" src="js/wow.js" charset="utf-8"></script> 
+  <script>
+        var js_comm_alert_okButton = '确认';
+        var js_comm_alert_cancelButton = '取消';
+        var js_comm_alert_login = '登录';
+        var js_comm_alert_goreturn = '返回';
+    </script> 
+  <script type="text/javascript" src="js/alert.js" charset="utf-8"></script> 
+  <script type="text/javascript" src="js/0611877.js" charset="utf-8"></script> 
+  <script type="text/javascript" src="js/comm.js" charset="utf-8"></script> 
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"> 
+  <link rel="stylesheet" type="text/css" href="css/animate.min.css"> 
+  <link rel="stylesheet" type="text/css" href="css/box.css"> 
+  <link rel="stylesheet" type="text/css" href="css/alert.css"> 
+  <link rel="stylesheet" type="text/css" href="css/comm.css"> 
+  <link rel="stylesheet" type="text/css" href="css/0611877.css"> 
+  <link rel="stylesheet" type="text/css" href="css/iconfont.css"> 
+  <script>
+	var batchArr = [];
+	var checkLoad = 0;//判断是否是回调完成的
+</script> 
+  <script>
+    var isOpenMobie = 2;
+    var isOpenPad = 1;
+    if(isOpenMobie == 1){
+        if(isOpenPad == 1){
+            $("body").css("width","auto");
+        }else{
+            //是否手机端判断
+            var ua = navigator.userAgent;
+            var ipad = ua.match(/(iPad).*OS\s([\d_]+)/),
+                isIphone =!ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/),
+                isAndroid = ua.match(/(Android)\s+([\d.]+)/),
+                isMobile = isIphone || isAndroid;
+            if(isMobile){
+                $("body").css("width","1280px");
+            }else{
+                $("body").css("width","auto");
+            }
+        }
+    }else{
+        $("body").css("width","auto");
+        $("head").append("<meta id='headScreen' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport' />");
+    }
+    //手机屏幕尺寸兼容 purewinter 2019-03-26
+    $(window).on('load',function(){
+        bodyScale();
+    });
+    function bodyScale(){
+        var windowWidth = $(window).width();
+        $("#bodyScale").remove();
+        if(windowWidth < 680){
+            var scale = windowWidth / 375;
+            $("#headScreen").remove();
+            $("head").append("<meta id='headScreen' content='width=375, initial-scale="+scale+", maximum-scale="+scale+", user-scalable=no' name='viewport' />");
+        }else if(windowWidth < 960){
+            var scale = windowWidth / 960;
+            $("#headScreen").remove();
+            $("head").append("<meta id='headScreen' content='width=960, initial-scale="+scale+", maximum-scale="+scale+", user-scalable=no' name='viewport' />");
+        }
+    }
+</script> 
+  <script>
+String.prototype.replaceAll= function(s1,s2){
+    return this.replace(new RegExp(s1,"gm"),s2);
+}
+function getQueryVariable(variable)
+{
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    for (var i=0;i<vars.length;i++) {
+        var pair = vars[i].split("=");
+        if(pair[0] == variable){return pair[1];}
+    }
+    return(false);
+}
+var FIDUser = getQueryVariable('FIDUser');
+var param = "idweb=49985&langid=0&UPermission=all&FIDUser=" + FIDUser;
+document.getElementsByTagName('head')[0].appendChild(document. createElement('script')).src="https://s143js.nicebox.cn/exusers/login_html_v9_diy.php?" + param;
+// 字体大小限制不跟随系统
+$(document).ready(function(){
+    if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+        handleFontSize();
+    } else {
+        document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+    }
+    function handleFontSize() {
+        // 设置网页字体为默认大小
+        WeixinJSBridge.invoke('setFontSizeCallback', { 'fontSize' : 0 });
+        // 重写设置网页字体大小的事件
+        WeixinJSBridge.on('menu:setfont', function() {
+            WeixinJSBridge.invoke('setFontSizeCallback', { 'fontSize' : 0 });
+        });
+    }
+})
+const screenZoom = 1;
+//制作屏幕缩放导致错乱的，不过还有问题，暂时屏蔽5个文件	20230625
+// const screenZoom = 100 / Number(detectZoom());
+// document.body.style.zoom = screenZoom;
+// function detectZoom(){	//获取屏幕放大比例
+// 	//是否手机端判断
+// 	var ua = navigator.userAgent;
+// 	var ipad = ua.match(/(iPad).*OS\s([\d_]+)/),
+// 	    isIphone =!ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/),
+// 	    isAndroid = ua.match(/(Android)\s+([\d.]+)/),
+// 	    isMobile = isIphone || isAndroid;
+// 	if(ipad || isMobile){ return 100; }		//如果是ipad或手机真机/模拟机，不用调整
+// 	let ratio = 0;
+// 	if (window.devicePixelRatio !== undefined) {
+// 		ratio = window.devicePixelRatio;
+// 		console.log('ratio::'+ratio);
+// 	}
+// 	if (ratio) {
+// 		ratio = Math.round(ratio * 100);
+// 	}
+// 	return ratio;	//返回电脑系统的放大比例
+// }
+$(window).on('load',function(){
+    if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+        setTimeout(function(){
+            new WOW().init()
+        },150)
+    };
+});
+var DIY_WEBSITE_ID = "49985";
+var DIY_JS_SERVER = "s143js.nicebox.cn";
+var DIY_SCHEME = "https:";
+</script> 
+  <script src="/login_html_v9_diy.php"></script> 
+ </head> 
+ <body> 
+  <!--这里专门处理百度分享文章显示缩略图不正确的问题，因为百度分享读取的是第一张图片，缩略图尽量在400x400,但是至好宽高都要大于400，前提是具有微信分享功能，图片地址通过jq传入 $(".baiduImg").attr("src",shareImg);--> 
+  <div class="baiduImgSet" style="display: none;"> 
+   <img class="baiduImg" src="/index.html"> 
+  </div> 
+  <script type="text/javascript">var Default_isFT = 0;</script> 
+  <div id="comm_layout_header" class="layout   scrollView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+   <div class="view_contents"> 
+    <div id="div_a_includeBlock_1555902949247" class="view a_includeBlock div  includeView " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+     <div names="div" class="view_contents"> 
+      <div id="image_logo_1555903082661" class="view logo image  " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+       <div names="image" class="view_contents"> 
+        <div class="logoStyle modSet"> 
+         <a href="index.html" target="_self"><img class="imgSet" src="images/logo.png" title="上海合作组织国家数字科技平台官网" alt="上海合作组织国家数字科技平台官网" style="width:auto; height:100%; margin-left:0px"></a> 
+        </div> 
+       </div> 
+      </div> 
+      <div id="text_html_new_1687185480931" class="view html_new text  " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+       <div names="text" class="view_contents"> 
+        <script class="editor-view-extend">
+    </script>
+        <div class="diyStyle html_style_new"> 
+         <p> <br> </p>
+         <script>var _hmt = _hmt || []; (function() { var hm = document.createElement("script"); hm.src = "https://hm.baidu.com/hm.js?9001dafad0263603020fab414d286c70"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s); })();</script> 
+        </div> 
+       </div> 
+      </div> 
+      <div id="lang_style_1_1689585668725" class="view style_14 lang  lockHeightView " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+       <div names="lang" class="view_contents"> 
+        <div class="langStyle14 bgareaSet"> 
+         <!-- 语言列表 --> 
+         <div class="imgArea imgSet"> 
+          <img src="images/icon_03.png" alt="icon_03" class=""> 
+         </div> 
+         <a class="lang-item textSet" href="index.html?chlang=cn&amp;langid=0">简体中文</a> 
+         <div class="imgArea imgSet"> 
+          <img src="images/noimg.jpg" alt="noimg" class=""> 
+         </div> 
+         <a class="lang-item textSet" href="index.html?chlang=cn&amp;langid="></a> 
+         <!-- 额外的html --> 
+         <span id="currentlang" style="display:none"></span> 
+         <!-- 简体转繁体 --> 
+         <script type="text/javascript" src="js/transform.js"></script> 
+        </div> 
+       </div> 
+      </div> 
+      <div id="div_blank_new01_1708141887797" class="view blank_new01 div  " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+       <div names="div" class="view_contents"> 
+        <script class="editor-view-extend">
+    </script>
+        <div class="blank_new01"> 
+         <div class="roundcs modSet"></div> 
+        </div> 
+       </div> 
+      </div> 
+      <div id="text_style_01_1708141960976" class="view style_01 text  wow opacityHide a2 fadeIn lockHeightView " data-wow-duration="1s" data-wow-delay="0.25s" data-wow-offset="0" data-wow-iteration="1"> 
+       <div names="text" class="view_contents"> 
+        <script class="editor-view-extend">
+    </script>欢迎光临上海合作组织国际数字科技平台官网！ 
+       </div> 
+      </div> 
+      <div id="dh_style_28_1708143209012" class="view style_28 dh  lockHeightView " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+       <div names="dh" class="view_contents"> 
+        <div id="menu" class="menu menuStyle_28"> 
+         <div class="menuLayout"> 
+          <ul class="miniMenu columnSet showmobile"> 
+           <li class="leftBox"> 
+            <div class="nav"></div> 
+            <div class="sidebar icoMenuSet">
+             <i class="fa fa-navicon" onclick="setDhListen('style_01',this)"></i>
+            </div> 
+            <div class="menuScroll"> 
+             <ul class="menuUlCopy"> 
+              <li id="hot" class="rflex" pageid="611877" showmobile=""><a class="mainMenuSet" href="index.html"> 首页</a> </li> 
+              <li class="rflex" pageid="611989" showmobile=""><a class="mainMenuSet" href="about_scodtp.html"> 关于平台</a> <i class="fa fa-angle-down" onclick="navSwtich(this)"></i> 
+               <ul class="menuUlCopy"> 
+                <li pageid="611991" showmobile=""> <a class="subMenuSet" href="PlatformIntroduction.html">平台简介</a> </li> 
+                <li pageid="612005" showmobile=""> <a class="subMenuSet" href="OrganizationalStructure.html">组织架构</a> </li> 
+                <li pageid="612013" showmobile=""> <a class="subMenuSet" href="ServiceScope.html">服务范围</a> </li> 
+               </ul> </li> 
+              <li class="rflex" pageid="612029" showmobile=""><a class="mainMenuSet" href="KnowSCO.html"> 了解上合</a> <i class="fa fa-angle-down" onclick="navSwtich(this)"></i> 
+               <ul class="menuUlCopy"> 
+                <li pageid="612037" showmobile=""> <a class="subMenuSet" href="OverviewSCO.html">关于组织</a> </li> 
+                <li pageid="611993" showmobile=""> <a class="subMenuSet" href="SCOcountry.html">上合国家</a> </li> 
+                <li pageid="612023" showmobile=""> <a class="subMenuSet" href="SCODocuments.html">会议文件</a> </li> 
+               </ul> </li> 
+              <li class="rflex" pageid="612021" showmobile=""><a class="mainMenuSet" href="NewsCenter.html"> 新闻中心</a> <i class="fa fa-angle-down" onclick="navSwtich(this)"></i> 
+               <ul class="menuUlCopy"> 
+                <li pageid="612017" showmobile=""> <a class="subMenuSet" href="PlatformNews.html">平台动态</a> </li> 
+                <li pageid="612015" showmobile=""> <a class="subMenuSet" href="SCONews.html">上合动态</a> </li> 
+                <li pageid="612019" showmobile=""> <a class="subMenuSet" href="notice.html">公告通知</a> </li> 
+               </ul> </li> 
+              <li class="rflex" pageid="612039" showmobile=""><a class="mainMenuSet" href="PlatformActivities.html"> 平台活动</a> <i class="fa fa-angle-down" onclick="navSwtich(this)"></i> 
+               <ul class="menuUlCopy"> 
+                <li pageid="612043" showmobile=""> <a class="subMenuSet" href="PreviousEvents.html">往期活动</a> </li> 
+               </ul> </li> 
+              <li class="rflex" pageid="612009" showmobile=""><a class="mainMenuSet" href="ThinkTank.html"> 平台智库</a> </li> 
+              <li class="rflex" pageid="611895" showmobile=""><a class="mainMenuSet" href="contact_us.html"> 联系我们</a> </li> 
+             </ul> 
+            </div> </li> 
+          </ul> 
+          <div class="menuUl_box columnSet dhAreaSet showpc"> 
+           <ul class="menuUl dflex maxWidth "> 
+            <li id="hot" class="rflex isLi" pageid="611877" showpc=""> <a class="mainMenuSet Nosub" href="index.html"> 首页 </a> </li> 
+            <li class="rflex isLi" pageid="611989" showpc=""> <a class="mainMenuSet Onsub" href="about_scodtp.html"> 关于平台 <i class="fa fa-angle-down"></i> </a> 
+             <ul class="menuUl02 subminSet"> 
+              <li class="subMenu02 subMenuSet" pageid="611991" showpc=""> <a href="PlatformIntroduction.html"> 平台简介 </a> </li> 
+              <li class="subMenu02 subMenuSet" pageid="612005" showpc=""> <a href="OrganizationalStructure.html"> 组织架构 </a> </li> 
+              <li class="subMenu02 subMenuSet" pageid="612013" showpc=""> <a href="ServiceScope.html"> 服务范围 </a> </li> 
+             </ul> </li> 
+            <li class="rflex isLi" pageid="612029" showpc=""> <a class="mainMenuSet Onsub" href="KnowSCO.html"> 了解上合 <i class="fa fa-angle-down"></i> </a> 
+             <ul class="menuUl02 subminSet"> 
+              <li class="subMenu02 subMenuSet" pageid="612037" showpc=""> <a href="OverviewSCO.html"> 关于组织 </a> </li> 
+              <li class="subMenu02 subMenuSet" pageid="611993" showpc=""> <a href="SCOcountry.html"> 上合国家 </a> </li> 
+              <li class="subMenu02 subMenuSet" pageid="612023" showpc=""> <a href="SCODocuments.html"> 会议文件 </a> </li> 
+             </ul> </li> 
+            <li class="rflex isLi" pageid="612021" showpc=""> <a class="mainMenuSet Onsub" href="NewsCenter.html"> 新闻中心 <i class="fa fa-angle-down"></i> </a> 
+             <ul class="menuUl02 subminSet"> 
+              <li class="subMenu02 subMenuSet" pageid="612017" showpc=""> <a href="PlatformNews.html"> 平台动态 </a> </li> 
+              <li class="subMenu02 subMenuSet" pageid="612015" showpc=""> <a href="SCONews.html"> 上合动态 </a> </li> 
+              <li class="subMenu02 subMenuSet" pageid="612019" showpc=""> <a href="notice.html"> 公告通知 </a> </li> 
+             </ul> </li> 
+            <li class="rflex isLi" pageid="612039" showpc=""> <a class="mainMenuSet Onsub" href="PlatformActivities.html"> 平台活动 <i class="fa fa-angle-down"></i> </a> 
+             <ul class="menuUl02 subminSet"> 
+              <li class="subMenu02 subMenuSet" pageid="612043" showpc=""> <a href="PreviousEvents.html"> 往期活动 </a> </li> 
+             </ul> </li> 
+            <li class="rflex isLi" pageid="612009" showpc=""> <a class="mainMenuSet Nosub" href="ThinkTank.html"> 平台智库 </a> </li> 
+            <li class="rflex isLi" pageid="611895" showpc=""> <a class="mainMenuSet Nosub" href="contact_us.html"> 联系我们 </a> </li> 
+           </ul> 
+          </div> 
+         </div> 
+        </div> 
+        <!-- 导航栏目有下级时禁止跳转 --> 
+        <!-- 二级菜单宽度自适应 --> 
+        <!-- 二级菜单图片宽度 --> 
+       </div> 
+      </div> 
+      <div id="div_blank_new01_1708143993956" class="view blank_new01 div  " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+       <div names="div" class="view_contents"> 
+        <script class="editor-view-extend">
+    </script>
+        <div class="blank_new01"> 
+         <div class="roundcs modSet"></div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div id="text_style_01_1708141930364" class="view style_01 text  lockHeightView " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+     <div names="text" class="view_contents"> 
+      <script class="editor-view-extend">
+    </script>你好！欢迎光临深圳FTAI安全设备有限公司网站 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="layout_1555904887569" class="layout   scrollView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+   <div class="view_contents"> 
+    <div id="banner_style_01_1685442898381" class="view style_01 banner  " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+     <div names="banner" class="view_contents"> 
+      <div class="bannerStyle_1 normal" viewid="banner_style_01_1685442898381" autopc="0" autopad="0" automobile="0"> 
+       <div class="main_visual"> 
+        <div class="flicking_con"> 
+         <a href="#" class=""></a> 
+         <a href="#" class=""></a> 
+         <a href="#" class=""></a> 
+         <a href="#" class=""></a> 
+         <a href="#" class=""></a> 
+        </div> 
+        <div class="ground_glass"></div> 
+        <div class="main_image"> 
+         <div class="img-list"> 
+          <div class="img-item" style=""> 
+           <img src="images/168544313854669559e8b1c92e99f.jpg" class="hide_img noimgLoadLate" alt="1440x&amp;version=0"> 
+           <a class="picSet" href="javascript:void(0);" target="_blank"><span class="img_0"></span></a> 
+          </div> 
+          <div class="img-item" style="left:100%;"> 
+           <img src="images/1702125457195a418d7cec58c2d71de61151ae8157448.jpg" class="hide_img noimgLoadLate" alt="1440x&amp;version=0"> 
+           <a class="picSet" href="javascript:void(0);" target="_blank"><span class="img_1"></span></a> 
+          </div> 
+          <div class="img-item" style="left:100%;"> 
+           <img src="images/1702125457196924159e32dc95cebb477b5ee4f236463.jpg" class="hide_img noimgLoadLate" alt="1440x&amp;version=0"> 
+           <a class="picSet" href="javascript:void(0);" target="_blank"><span class="img_2"></span></a> 
+          </div> 
+          <div class="img-item" style="left:100%;"> 
+           <img src="images/170212545726198883fca02445194e639360ea8e5337a.jpg" class="hide_img noimgLoadLate" alt="1440x&amp;version=0"> 
+           <a class="picSet" href="javascript:void(0);" target="_blank"><span class="img_3"></span></a> 
+          </div> 
+          <div class="img-item" style="left:100%;"> 
+           <img src="images/17033341654180be6c24d0253455abcbdef6b247164c5.jpeg" class="hide_img noimgLoadLate" alt="1440x&amp;version=0"> 
+           <a class="picSet"><span class="img_4"></span></a> 
+          </div> 
+         </div> 
+         <a href="javascript:;" class="btn_prev arrowSet"><i class="fa fa-angle-left awesome-font"></i><span class="text-font">&lt;</span></a> 
+         <a href="javascript:;" class="btn_next arrowSet"><i class="fa fa-angle-right awesome-font"></i><span class="text-font">&gt;</span></a> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="layout_1691132461544" class="layout   scrollView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+   <div class="view_contents"> 
+   </div> 
+  </div> 
+  <div id="layout_1686583414474" class="layout   scrollView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+   <div class="view_contents"> 
+    <div id="newsList_style_25_1686583437236" class="view style_04 newsList  lockHeightView " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+     <div names="newsList" class="view_contents"> 
+      <!--新闻列表区域--> 
+      <!--pageSet pagecurSet--> 
+      <div class="boxNewsListStyle_4"> 
+       <ul id="boxNewsList"> 
+        <li class="sumary_list modSet"> 
+         <div class="newPic imgSet"> 
+          <a href="cnnew.html?newsid=2544131&amp;_t=1720246963" target="_blank"><img src="images/1719940263253664022ccf998c7aa97989fb48936f21c.png" alt="1719940263253664022ccf998c7aa97989fb48936f21c" class="News_img"></a> 
+          <div class="zTm" style="margin-top:67%"></div> 
+         </div> 
+         <div class="newCont"> 
+          <div class="newTitle"> 
+           <div class="newName"> 
+            <a class="titleSet newTitle pc" href="cnnew.html?newsid=2544131&amp;_t=1720246963" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              上海合作组织成员国元首理事会阿斯塔纳...
+             </div></a> 
+            <a class="titleSet newTitle pad" href="cnnew.html?newsid=2544131&amp;_t=1720246963" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              上海合作组织成员国元首理事会阿斯塔纳...
+             </div></a> 
+            <a class="titleSet newTitle mobile" href="cnnew.html?newsid=2544131&amp;_t=1720246963" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              上海合作组织成员国元首理事会阿斯塔纳...
+             </div></a> 
+           </div> 
+           <div class="newDetail detailSet pc" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+           <div class="newDetail detailSet pad" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+           <div class="newDetail detailSet mobile" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+          </div> 
+          <div class="newB"> 
+           <span class="newSort sortSet">平台动态</span> 
+           <span class="newsTime timesSet"><span class="nDate">2024-07-06</span> <span class="nTime">14:22:42</span></span> 
+          </div> 
+          <div class="show_all"> 
+           <a class="btnaSet" href="cnnew.html?newsid=2544131&amp;_t=1720246963" target="_blank">查看全文</a> 
+          </div> 
+         </div> </li> 
+        <li class="sumary_list modSet"> 
+         <div class="newPic imgSet"> 
+          <a href="cnnew.html?newsid=2544129&amp;_t=1720246422" target="_blank"><img src="/1720245321459c64758d83574168692efd615bd74ea63.webp" alt="1720245321459c64758d83574168692efd615bd74ea63" class="News_img"></a> 
+          <div class="zTm" style="margin-top:67%"></div> 
+         </div> 
+         <div class="newCont"> 
+          <div class="newTitle"> 
+           <div class="newName"> 
+            <a class="titleSet newTitle pc" href="cnnew.html?newsid=2544129&amp;_t=1720246422" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              上海合作组织实业家委员会理事会会议
+             </div></a> 
+            <a class="titleSet newTitle pad" href="cnnew.html?newsid=2544129&amp;_t=1720246422" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              上海合作组织实业家委员会理事会会议
+             </div></a> 
+            <a class="titleSet newTitle mobile" href="cnnew.html?newsid=2544129&amp;_t=1720246422" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              上海合作组织实业家委员会理事会会议
+             </div></a> 
+           </div> 
+           <div class="newDetail detailSet pc" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+           <div class="newDetail detailSet pad" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+           <div class="newDetail detailSet mobile" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+          </div> 
+          <div class="newB"> 
+           <span class="newSort sortSet">平台动态</span> 
+           <span class="newsTime timesSet"><span class="nDate">2024-07-06</span> <span class="nTime">14:13:41</span></span> 
+          </div> 
+          <div class="show_all"> 
+           <a class="btnaSet" href="cnnew.html?newsid=2544129&amp;_t=1720246422" target="_blank">查看全文</a> 
+          </div> 
+         </div> </li> 
+        <li class="sumary_list modSet"> 
+         <div class="newPic imgSet"> 
+          <a href="cnnew.html?newsid=2540987&amp;_t=1719988499" target="_blank"><img src="images/171998918324441e386485c3d5c774839339e55a1a38a.png" alt="869b7168e766bc5c121538c9f9154f1" class="News_img"></a> 
+          <div class="zTm" style="margin-top:67%"></div> 
+         </div> 
+         <div class="newCont"> 
+          <div class="newTitle"> 
+           <div class="newName"> 
+            <a class="titleSet newTitle pc" href="cnnew.html?newsid=2540987&amp;_t=1719988499" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              六家上合组织国家电视台共同播出联合特...
+             </div></a> 
+            <a class="titleSet newTitle pad" href="cnnew.html?newsid=2540987&amp;_t=1719988499" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              六家上合组织国家电视台共同播出联合特...
+             </div></a> 
+            <a class="titleSet newTitle mobile" href="cnnew.html?newsid=2540987&amp;_t=1719988499" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              六家上合组织国家电视台共同播出联合特...
+             </div></a> 
+           </div> 
+           <div class="newDetail detailSet pc" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+           <div class="newDetail detailSet pad" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+           <div class="newDetail detailSet mobile" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+          </div> 
+          <div class="newB"> 
+           <span class="newSort sortSet">平台动态</span> 
+           <span class="newsTime timesSet"><span class="nDate">2024-07-03</span> <span class="nTime">14:34:52</span></span> 
+          </div> 
+          <div class="show_all"> 
+           <a class="btnaSet" href="cnnew.html?newsid=2540987&amp;_t=1719988499" target="_blank">查看全文</a> 
+          </div> 
+         </div> </li> 
+        <li class="sumary_list modSet"> 
+         <div class="newPic imgSet"> 
+          <a href="cnnew.html?newsid=2540177&amp;_t=1719936411" target="_blank"><img src="images/171993449397075734f75fde67f4a651aee8fa5b7c44c.jpg" alt="mmexport1719934439317(1)" class="News_img"></a> 
+          <div class="zTm" style="margin-top:67%"></div> 
+         </div> 
+         <div class="newCont"> 
+          <div class="newTitle"> 
+           <div class="newName"> 
+            <a class="titleSet newTitle pc" href="cnnew.html?newsid=2540177&amp;_t=1719936411" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              童丹组织事务特别助理出席上海合作组织...
+             </div></a> 
+            <a class="titleSet newTitle pad" href="cnnew.html?newsid=2540177&amp;_t=1719936411" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              童丹组织事务特别助理出席上海合作组织...
+             </div></a> 
+            <a class="titleSet newTitle mobile" href="cnnew.html?newsid=2540177&amp;_t=1719936411" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              童丹组织事务特别助理出席上海合作组织...
+             </div></a> 
+           </div> 
+           <div class="newDetail detailSet pc" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+           <div class="newDetail detailSet pad" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+           <div class="newDetail detailSet mobile" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+          </div> 
+          <div class="newB"> 
+           <span class="newSort sortSet">平台动态</span> 
+           <span class="newsTime timesSet"><span class="nDate">2024-07-03</span> <span class="nTime">00:06:50</span></span> 
+          </div> 
+          <div class="show_all"> 
+           <a class="btnaSet" href="cnnew.html?newsid=2540177&amp;_t=1719936411" target="_blank">查看全文</a> 
+          </div> 
+         </div> </li> 
+        <li class="sumary_list modSet"> 
+         <div class="newPic imgSet"> 
+          <a href="cnnew.html?newsid=2539393&amp;_t=1719897332" target="_blank"><img src="images/1719899200364c4ca4238a0b923820dcc509a6f75849b.png" alt="1" class="News_img"></a> 
+          <div class="zTm" style="margin-top:67%"></div> 
+         </div> 
+         <div class="newCont"> 
+          <div class="newTitle"> 
+           <div class="newName"> 
+            <a class="titleSet newTitle pc" href="cnnew.html?newsid=2539393&amp;_t=1719897332" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              时政Vlog丨迎接习主席到访 阿斯塔...
+             </div></a> 
+            <a class="titleSet newTitle pad" href="cnnew.html?newsid=2539393&amp;_t=1719897332" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              时政Vlog丨迎接习主席到访 阿斯塔...
+             </div></a> 
+            <a class="titleSet newTitle mobile" href="cnnew.html?newsid=2539393&amp;_t=1719897332" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              时政Vlog丨迎接习主席到访 阿斯塔...
+             </div></a> 
+           </div> 
+           <div class="newDetail detailSet pc" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+           <div class="newDetail detailSet pad" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+           <div class="newDetail detailSet mobile" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+          </div> 
+          <div class="newB"> 
+           <span class="newSort sortSet">平台动态</span> 
+           <span class="newsTime timesSet"><span class="nDate">2024-07-02</span> <span class="nTime">13:15:32</span></span> 
+          </div> 
+          <div class="show_all"> 
+           <a class="btnaSet" href="cnnew.html?newsid=2539393&amp;_t=1719897332" target="_blank">查看全文</a> 
+          </div> 
+         </div> </li> 
+        <li class="sumary_list modSet"> 
+         <div class="newPic imgSet"> 
+          <a href="cnnew.html?newsid=2538585&amp;_t=1719834449" target="_blank"><img src="images/1719834421931d9a886f1f3d5e8e1fadef001a99365e8.jpg" alt="20240630155246108" class="News_img"></a> 
+          <div class="zTm" style="margin-top:67%"></div> 
+         </div> 
+         <div class="newCont"> 
+          <div class="newTitle"> 
+           <div class="newName"> 
+            <a class="titleSet newTitle pc" href="cnnew.html?newsid=2538585&amp;_t=1719834449" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              启播！中央广播电视总台精品节目哈萨克...
+             </div></a> 
+            <a class="titleSet newTitle pad" href="cnnew.html?newsid=2538585&amp;_t=1719834449" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              启播！中央广播电视总台精品节目哈萨克...
+             </div></a> 
+            <a class="titleSet newTitle mobile" href="cnnew.html?newsid=2538585&amp;_t=1719834449" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              启播！中央广播电视总台精品节目哈萨克...
+             </div></a> 
+           </div> 
+           <div class="newDetail detailSet pc" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+           <div class="newDetail detailSet pad" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+           <div class="newDetail detailSet mobile" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+          </div> 
+          <div class="newB"> 
+           <span class="newSort sortSet">平台动态</span> 
+           <span class="newsTime timesSet"><span class="nDate">2024-07-01</span> <span class="nTime">19:47:29</span></span> 
+          </div> 
+          <div class="show_all"> 
+           <a class="btnaSet" href="cnnew.html?newsid=2538585&amp;_t=1719834449" target="_blank">查看全文</a> 
+          </div> 
+         </div> </li> 
+        <li class="sumary_list modSet"> 
+         <div class="newPic imgSet"> 
+          <a href="cnnew.html?newsid=2538471&amp;_t=1719820271" target="_blank"><img src="images/171982066058782eba91eb7e16ed574264a61c8a38d33.jpeg" alt="a6e7f4c720574750be70eccbc9261aed" class="News_img"></a> 
+          <div class="zTm" style="margin-top:67%"></div> 
+         </div> 
+         <div class="newCont"> 
+          <div class="newTitle"> 
+           <div class="newName"> 
+            <a class="titleSet newTitle pc" href="cnnew.html?newsid=2538471&amp;_t=1719820271" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              天安门广场举行升旗仪式庆祝建党103...
+             </div></a> 
+            <a class="titleSet newTitle pad" href="cnnew.html?newsid=2538471&amp;_t=1719820271" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              天安门广场举行升旗仪式庆祝建党103...
+             </div></a> 
+            <a class="titleSet newTitle mobile" href="cnnew.html?newsid=2538471&amp;_t=1719820271" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              天安门广场举行升旗仪式庆祝建党103...
+             </div></a> 
+           </div> 
+           <div class="newDetail detailSet pc" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+           <div class="newDetail detailSet pad" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+           <div class="newDetail detailSet mobile" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+          </div> 
+          <div class="newB"> 
+           <span class="newSort sortSet">平台动态</span> 
+           <span class="newsTime timesSet"><span class="nDate">2024-07-01</span> <span class="nTime">15:51:11</span></span> 
+          </div> 
+          <div class="show_all"> 
+           <a class="btnaSet" href="cnnew.html?newsid=2538471&amp;_t=1719820271" target="_blank">查看全文</a> 
+          </div> 
+         </div> </li> 
+        <li class="sumary_list modSet"> 
+         <div class="newPic imgSet"> 
+          <a href="cnnew.html?newsid=2476985&amp;_t=1711718008" target="_blank"><img src="images/17117172699254366b56f469f1cd5e50a5d1e3f0da499.png" alt="450x&amp;version=1711717273" class="News_img"></a> 
+          <div class="zTm" style="margin-top:67%"></div> 
+         </div> 
+         <div class="newCont"> 
+          <div class="newTitle"> 
+           <div class="newName"> 
+            <a class="titleSet newTitle pc" href="cnnew.html?newsid=2476985&amp;_t=1711718008" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              平台应邀参加中国“哈萨克斯坦旅游年”...
+             </div></a> 
+            <a class="titleSet newTitle pad" href="cnnew.html?newsid=2476985&amp;_t=1711718008" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              平台应邀参加中国“哈萨克斯坦旅游年”...
+             </div></a> 
+            <a class="titleSet newTitle mobile" href="cnnew.html?newsid=2476985&amp;_t=1711718008" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              平台应邀参加中国“哈萨克斯坦旅游年”...
+             </div></a> 
+           </div> 
+           <div class="newDetail detailSet pc" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+           <div class="newDetail detailSet pad" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+           <div class="newDetail detailSet mobile" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+          </div> 
+          <div class="newB"> 
+           <span class="newSort sortSet">平台动态</span> 
+           <span class="newsTime timesSet"><span class="nDate">2024-03-29</span> <span class="nTime">21:13:30</span></span> 
+          </div> 
+          <div class="show_all"> 
+           <a class="btnaSet" href="cnnew.html?newsid=2476985&amp;_t=1711718008" target="_blank">查看全文</a> 
+          </div> 
+         </div> </li> 
+        <li></li> 
+        <li></li> 
+        <li></li> 
+        <li></li> 
+        <li></li> 
+        <li></li> 
+        <li></li> 
+        <li></li> 
+       </ul> 
+       <div class="page_btn"> 
+        <div class="new_page">
+         <a class="page pageSet new_prev_btn sty04" page="<" href="#newsList_style_25_1686583437236" onclick="RequestURL('newsList_style_25_1686583437236', sys_url_newsList_style_25_1686583437236, 'News_page=1&amp;')">&lt;</a>
+         <a id="pagecurSet" class="page pageSet sty04 cur" href="javascript:;" page="1">1</a>
+         <a class="page pageSet sty04" page="2" href="#newsList_style_25_1686583437236" onclick="RequestURL('newsList_style_25_1686583437236', sys_url_newsList_style_25_1686583437236, 'News_page=2&amp;')">2</a>
+         <a class="page pageSet sty04" page="3" href="#newsList_style_25_1686583437236" onclick="RequestURL('newsList_style_25_1686583437236', sys_url_newsList_style_25_1686583437236, 'News_page=3&amp;')">3</a>
+         <a class="page pageSet sty04" page="4" href="#newsList_style_25_1686583437236" onclick="RequestURL('newsList_style_25_1686583437236', sys_url_newsList_style_25_1686583437236, 'News_page=4&amp;')">4</a>
+         <a class="page pageSet sty04" page="5" href="#newsList_style_25_1686583437236" onclick="RequestURL('newsList_style_25_1686583437236', sys_url_newsList_style_25_1686583437236, 'News_page=5&amp;')">5</a>
+         <a class="page pageSet quick_next sty04" page="···" href="#newsList_style_25_1686583437236" onclick="RequestURL('newsList_style_25_1686583437236', sys_url_newsList_style_25_1686583437236, 'News_page=6&amp;')">···</a>
+         <a class="page pageSet new_next_btn sty04" page=">" href="#newsList_style_25_1686583437236" onclick="RequestURL('newsList_style_25_1686583437236', sys_url_newsList_style_25_1686583437236, 'News_page=2&amp;')">&gt;</a>
+         <div class="submit_div">
+          <span class="all_page">共7页</span>到第 
+          <input type="text" id="page_set" class="page pageSet sty04" value="1"> 页 
+          <span class="page_submit page pageSet sty04" onclick="">确定</span>
+         </div>
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div id="text_style_01_1686583571481" class="view style_01 text  lockHeightView " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+     <div names="text" class="view_contents"> 
+      <script class="editor-view-extend">
+    </script>平台动态 
+     </div> 
+    </div> 
+    <div id="div_blank_new05_1686583587932" class="view blank_new05 div  lockHeightView " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+     <div names="div" class="view_contents"> 
+      <div class="blank_new05 blank_area"> 
+       <div class="roundcs modSet"> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="layout_1691055682725" class="layout   scrollView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+   <div class="view_contents"> 
+    <div id="text_style_01_1691055682728" class="view style_01 text  lockHeightView " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+     <div names="text" class="view_contents"> 
+      <script class="editor-view-extend">
+    </script>
+      <div>
+       上海合作组织是由哈萨克斯坦共和国、中华人民共和国、吉尔吉斯共和国、俄罗斯联邦、塔吉克斯坦共和国、乌兹别克斯坦共和国于2001年6月15日在中国上海宣布成立的永久性政府间国际组织。它的前身是“上海五国”机制。
+      </div>
+      <div>
+       上合组织的宗旨是：加强各成员国之间的相互信任与睦邻友好；鼓励成员国在政治、经贸、科技、文化、教育、能源、交通、旅游、环保及其它领域的有效合作；共同致力于维护和保障地区的和平、安全与稳定；推动建立民主、公正、合理的国际政治经济新秩序。
+      </div> 
+     </div> 
+    </div> 
+    <div id="text_style_15_1691055682743" class="view style_15 text  lockHeightView " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+     <div names="text" class="view_contents"> 
+      <div class="textList_default15"> 
+       <div class="list modSet"> 
+        <div class="title_view"> 
+         <div class="title titleSet"> 
+          <span></span> 
+          <span>ABOUT SCO</span> 
+         </div> 
+        </div> 
+        <!-- 是否有简介 --> 
+        <div class="info infoTextSet">
+         <p>关于上合组织</p>
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div id="button_style_01_1691057139378" class="view style_01 button  lockHeightView " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+     <div names="button" class="view_contents"> 
+      <button type="button" class="button_default01  btnaSet" onclick="location.href='SCOcountry.html'">了解详情</button> 
+     </div> 
+    </div> 
+    <div id="counter_style_3_1691055682738" class="view style_3 counter  lockHeightView " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+     <div names="counter" class="view_contents"> 
+      <div class="counterStyle03"> 
+       <ul class="numberUl listBlocksSet" id="CounterStyleUl"> 
+        <li class="li numberLi "> 
+         <div class="numberItem modSet"> 
+          <div class="number">
+           <span class="span num numhSet">10</span>
+           <span class="span unit unitSet">个</span>
+          </div> 
+          <div class="text titleSet">
+           成员国
+          </div> 
+         </div> </li> 
+        <li class="li numberLi "> 
+         <div class="numberItem modSet"> 
+          <div class="number">
+           <span class="span num numhSet">2</span>
+           <span class="span unit unitSet">个</span>
+          </div> 
+          <div class="text titleSet">
+           观察员国
+          </div> 
+         </div> </li> 
+        <li class="li numberLi "> 
+         <div class="numberItem modSet"> 
+          <div class="number">
+           <span class="span num numhSet">14</span>
+           <span class="span unit unitSet">个</span>
+          </div> 
+          <div class="text titleSet">
+           对话伙伴国
+          </div> 
+         </div> </li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+    <div id="image_style_01_1691055682735" class="view style_01 image  " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+     <div names="image" class="view_contents"> 
+      <script class="editor-view-extend">
+    </script>
+      <div class="imgStyle CompatibleImg picSet"> 
+       <img class="link-type-" src="images/1691056486420201f87a2ecc8888d3a8124ff038d9f77.jpeg" title="" alt="描述" id="imageModeShow" style="border-radius: inherit;"> 
+      </div> 
+      <!-- 新加的js  --> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="layout_1555912812574" class="layout   scrollView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+   <div class="view_contents"> 
+   </div> 
+  </div> 
+  <div id="layout_1555913059720" class="layout   scrollView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+   <div class="view_contents"> 
+    <div id="text_style_01_1685443978065" class="view style_01 text  lockHeightView " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+     <div names="text" class="view_contents"> 
+      <script class="editor-view-extend">
+    </script>上合动态 
+     </div> 
+    </div> 
+    <div id="div_blank_new05_1685444040167" class="view blank_new05 div  lockHeightView " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+     <div names="div" class="view_contents"> 
+      <div class="blank_new05 blank_area"> 
+       <div class="roundcs modSet"> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="layout_1555913225926" class="layout   scrollView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+   <div class="view_contents"> 
+    <div id="newsList_style_04_1555926962597" class="view style_04 newsList  lockHeightView " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+     <div names="newsList" class="view_contents"> 
+      <!--新闻列表区域--> 
+      <!--pageSet pagecurSet--> 
+      <div class="boxNewsListStyle_4"> 
+       <ul id="boxNewsList"> 
+        <li class="sumary_list modSet"> 
+         <div class="newPic imgSet"> 
+          <a href="cnnew.html?newsid=2544131&amp;_t=1720246963" target="_self"><img src="images/1719940263253664022ccf998c7aa97989fb48936f21c_b1bf60bfe51c4548aba1b7a9145ab185.png" alt="1719940263253664022ccf998c7aa97989fb48936f21c" class="News_img"></a> 
+          <div class="zTm" style="margin-top:100%"></div> 
+         </div> 
+         <div class="newCont"> 
+          <div class="newTitle"> 
+           <div class="newName"> 
+            <a class="titleSet newTitle pc" href="cnnew.html?newsid=2544131&amp;_t=1720246963" target="_self" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              上海合作组织成员国元首理事会阿斯塔纳宣言
+             </div></a> 
+            <a class="titleSet newTitle pad" href="cnnew.html?newsid=2544131&amp;_t=1720246963" target="_self" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              上海合作组织成员国元首理事会阿斯塔纳宣言
+             </div></a> 
+            <a class="titleSet newTitle mobile" href="cnnew.html?newsid=2544131&amp;_t=1720246963" target="_self" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              上海合作组织成员国元首理事会阿斯塔纳宣言
+             </div></a> 
+           </div> 
+           <div class="newDetail detailSet pc" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+           <div class="newDetail detailSet pad" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+           <div class="newDetail detailSet mobile" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+          </div> 
+          <div class="newB"> 
+           <span class="newsTime timesSet"><span class="nDate">2024-07-06</span> <span class="nTime">14:22:42</span></span> 
+          </div> 
+         </div> </li> 
+        <li class="sumary_list modSet"> 
+         <div class="newPic imgSet"> 
+          <a href="cnnew.html?newsid=2544129&amp;_t=1720246422" target="_self"><img src="/1720245321459c64758d83574168692efd615bd74ea63_d33750e9726e4e9eb1be2b58d9001b9a.webp" alt="1411077_0_156_3000_1844_0x540_80_0_0_de5590f74a01ab5ccc28b398e0571aaf.jpg" class="News_img"></a> 
+          <div class="zTm" style="margin-top:100%"></div> 
+         </div> 
+         <div class="newCont"> 
+          <div class="newTitle"> 
+           <div class="newName"> 
+            <a class="titleSet newTitle pc" href="cnnew.html?newsid=2544129&amp;_t=1720246422" target="_self" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              上海合作组织实业家委员会理事会会议
+             </div></a> 
+            <a class="titleSet newTitle pad" href="cnnew.html?newsid=2544129&amp;_t=1720246422" target="_self" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              上海合作组织实业家委员会理事会会议
+             </div></a> 
+            <a class="titleSet newTitle mobile" href="cnnew.html?newsid=2544129&amp;_t=1720246422" target="_self" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              上海合作组织实业家委员会理事会会议
+             </div></a> 
+           </div> 
+           <div class="newDetail detailSet pc" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+           <div class="newDetail detailSet pad" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+           <div class="newDetail detailSet mobile" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+          </div> 
+          <div class="newB"> 
+           <span class="newsTime timesSet"><span class="nDate">2024-07-06</span> <span class="nTime">14:13:41</span></span> 
+          </div> 
+         </div> </li> 
+        <li class="sumary_list modSet"> 
+         <div class="newPic imgSet"> 
+          <a href="cnnew.html?newsid=2543303&amp;_t=1720154996" target="_self"><img src="images/1719940263253664022ccf998c7aa97989fb48936f21c_b1bf60bfe51c4548aba1b7a9145ab185.png" alt="1719940263253664022ccf998c7aa97989fb48936f21c" class="News_img"></a> 
+          <div class="zTm" style="margin-top:100%"></div> 
+         </div> 
+         <div class="newCont"> 
+          <div class="newTitle"> 
+           <div class="newName"> 
+            <a class="titleSet newTitle pc" href="cnnew.html?newsid=2543303&amp;_t=1720154996" target="_self" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              习近平步出舱门 塔吉克斯坦总统拉赫蒙到机场迎接
+             </div></a> 
+            <a class="titleSet newTitle pad" href="cnnew.html?newsid=2543303&amp;_t=1720154996" target="_self" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              习近平步出舱门 塔吉克斯坦总统拉赫蒙到机场迎接
+             </div></a> 
+            <a class="titleSet newTitle mobile" href="cnnew.html?newsid=2543303&amp;_t=1720154996" target="_self" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              习近平步出舱门 塔吉克斯坦总统拉赫蒙到机场迎接
+             </div></a> 
+           </div> 
+           <div class="newDetail detailSet pc" style="-webkit-line-clamp: ;">
+            <div class="overhide">
+             专机抵达杜尚别国际机场时，塔吉克斯坦总统拉赫蒙率议会上院议长兼杜尚别市长鲁斯塔姆外长穆赫里丁等高级官...
+            </div>
+           </div> 
+           <div class="newDetail detailSet pad" style="-webkit-line-clamp: ;">
+            <div class="overhide">
+             专机抵达杜尚别国际机...
+            </div>
+           </div> 
+           <div class="newDetail detailSet mobile" style="-webkit-line-clamp: ;">
+            <div class="overhide">
+             专机抵达杜尚别国际机...
+            </div>
+           </div> 
+          </div> 
+          <div class="newB"> 
+           <span class="newsTime timesSet"><span class="nDate">2024-07-05</span> <span class="nTime">12:49:56</span></span> 
+          </div> 
+         </div> </li> 
+        <li class="sumary_list modSet"> 
+         <div class="newPic imgSet"> 
+          <a href="cnnew.html?newsid=2543027&amp;_t=1720140193" target="_self"><img src="images/17201401661614ba2f146becaf4f355adf432d16265e8.jpeg" alt="17201401661614ba2f146becaf4f355adf432d16265e8" class="News_img"></a> 
+          <div class="zTm" style="margin-top:100%"></div> 
+         </div> 
+         <div class="newCont"> 
+          <div class="newTitle"> 
+           <div class="newName"> 
+            <a class="titleSet newTitle pc" href="cnnew.html?newsid=2543027&amp;_t=1720140193" target="_self" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              习近平在“上海合作组织+”阿斯塔纳峰会上的讲话
+             </div></a> 
+            <a class="titleSet newTitle pad" href="cnnew.html?newsid=2543027&amp;_t=1720140193" target="_self" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              习近平在“上海合作组织+”阿斯塔纳峰会上的讲话
+             </div></a> 
+            <a class="titleSet newTitle mobile" href="cnnew.html?newsid=2543027&amp;_t=1720140193" target="_self" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              习近平在“上海合作组织+”阿斯塔纳峰会上的讲话
+             </div></a> 
+           </div> 
+           <div class="newDetail detailSet pc" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+           <div class="newDetail detailSet pad" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+           <div class="newDetail detailSet mobile" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+          </div> 
+          <div class="newB"> 
+           <span class="newsTime timesSet"><span class="nDate">2024-07-05</span> <span class="nTime">08:43:14</span></span> 
+          </div> 
+         </div> </li> 
+        <li></li> 
+        <li></li> 
+        <li></li> 
+        <li></li> 
+        <li></li> 
+        <li></li> 
+        <li></li> 
+        <li></li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+    <div id="newsList_style_04_1690206459448" class="view style_04 newsList  lockHeightView " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+     <div names="newsList" class="view_contents"> 
+      <!--新闻列表区域--> 
+      <!--pageSet pagecurSet--> 
+      <div class="boxNewsListStyle_4"> 
+       <ul id="boxNewsList"> 
+        <li class="sumary_list modSet"> 
+         <div class="newPic imgSet"> 
+          <a href="cnnew.html?newsid=2543303&amp;_t=1720154996" target="_blank"><img src="images/1719940263253664022ccf998c7aa97989fb48936f21c.png" alt="1719940263253664022ccf998c7aa97989fb48936f21c" class="News_img"></a> 
+          <div class="zTm" style="margin-top:67%"></div> 
+         </div> 
+         <div class="newCont"> 
+          <div class="newTitle"> 
+           <div class="newName"> 
+            <a class="titleSet newTitle pc" href="cnnew.html?newsid=2543303&amp;_t=1720154996" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              习近平步出舱门 塔吉克斯坦总...
+             </div></a> 
+            <a class="titleSet newTitle pad" href="cnnew.html?newsid=2543303&amp;_t=1720154996" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              习近平步出舱门 塔吉克斯坦总...
+             </div></a> 
+            <a class="titleSet newTitle mobile" href="cnnew.html?newsid=2543303&amp;_t=1720154996" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              习近平步出舱门 塔吉克斯坦总...
+             </div></a> 
+           </div> 
+           <div class="newDetail detailSet pc" style="-webkit-line-clamp: ;">
+            <div class="overhide">
+             专机抵达杜尚别国际机场时，塔吉克斯坦总统拉赫蒙率议会上院议长兼杜...
+            </div>
+           </div> 
+           <div class="newDetail detailSet pad" style="-webkit-line-clamp: ;">
+            <div class="overhide">
+             专机抵达杜尚别国际机场时，塔吉克斯坦总统拉赫蒙率...
+            </div>
+           </div> 
+           <div class="newDetail detailSet mobile" style="-webkit-line-clamp: ;">
+            <div class="overhide">
+             专机抵达杜尚别国际机场时，塔吉克斯坦总统拉赫蒙...
+            </div>
+           </div> 
+          </div> 
+          <div class="newB"> 
+           <span class="newSort sortSet">上合动态</span> 
+           <span class="newsTime timesSet"><span class="nDate">2024-07-05</span> <span class="nTime">12:49:56</span></span> 
+          </div> 
+          <div class="show_all"> 
+           <a class="btnaSet" href="cnnew.html?newsid=2543303&amp;_t=1720154996" target="_blank">查看全文</a> 
+          </div> 
+         </div> </li> 
+        <li class="sumary_list modSet"> 
+         <div class="newPic imgSet"> 
+          <a href="cnnew.html?newsid=2543027&amp;_t=1720140193" target="_blank"><img src="images/17201401661614ba2f146becaf4f355adf432d16265e8_57ff04865e5b42198bbb1c93b9fa7565.jpeg" alt="08bb126d-0d7a-d5b8-c5e7-82fc031423c7_20240705_17201401661568010" class="News_img"></a> 
+          <div class="zTm" style="margin-top:67%"></div> 
+         </div> 
+         <div class="newCont"> 
+          <div class="newTitle"> 
+           <div class="newName"> 
+            <a class="titleSet newTitle pc" href="cnnew.html?newsid=2543027&amp;_t=1720140193" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              习近平在“上海合作组织+”阿...
+             </div></a> 
+            <a class="titleSet newTitle pad" href="cnnew.html?newsid=2543027&amp;_t=1720140193" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              习近平在“上海合作组织+”阿...
+             </div></a> 
+            <a class="titleSet newTitle mobile" href="cnnew.html?newsid=2543027&amp;_t=1720140193" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              习近平在“上海合作组织+”阿...
+             </div></a> 
+           </div> 
+           <div class="newDetail detailSet pc" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+           <div class="newDetail detailSet pad" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+           <div class="newDetail detailSet mobile" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+          </div> 
+          <div class="newB"> 
+           <span class="newSort sortSet">上合动态</span> 
+           <span class="newsTime timesSet"><span class="nDate">2024-07-05</span> <span class="nTime">08:43:14</span></span> 
+          </div> 
+          <div class="show_all"> 
+           <a class="btnaSet" href="cnnew.html?newsid=2543027&amp;_t=1720140193" target="_blank">查看全文</a> 
+          </div> 
+         </div> </li> 
+        <li class="sumary_list modSet"> 
+         <div class="newPic imgSet"> 
+          <a href="cnnew.html?newsid=2541209&amp;_t=1720005881" target="_blank"><img src="/172000578661998fbdddac997e57da384b0696f171977.webp" alt="u=3543171080,1083203377&amp;fm=253&amp;fmt=auto&amp;app=120&amp;f=JPEG" class="News_img"></a> 
+          <div class="zTm" style="margin-top:67%"></div> 
+         </div> 
+         <div class="newCont"> 
+          <div class="newTitle"> 
+           <div class="newName"> 
+            <a class="titleSet newTitle pc" href="cnnew.html?newsid=2541209&amp;_t=1720005881" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              习近平同哈萨克斯坦总统托卡耶...
+             </div></a> 
+            <a class="titleSet newTitle pad" href="cnnew.html?newsid=2541209&amp;_t=1720005881" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              习近平同哈萨克斯坦总统托卡耶...
+             </div></a> 
+            <a class="titleSet newTitle mobile" href="cnnew.html?newsid=2541209&amp;_t=1720005881" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              习近平同哈萨克斯坦总统托卡耶...
+             </div></a> 
+           </div> 
+           <div class="newDetail detailSet pc" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+           <div class="newDetail detailSet pad" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+           <div class="newDetail detailSet mobile" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+          </div> 
+          <div class="newB"> 
+           <span class="newSort sortSet">上合动态</span> 
+           <span class="newsTime timesSet"><span class="nDate">2024-07-03</span> <span class="nTime">19:24:40</span></span> 
+          </div> 
+          <div class="show_all"> 
+           <a class="btnaSet" href="cnnew.html?newsid=2541209&amp;_t=1720005881" target="_blank">查看全文</a> 
+          </div> 
+         </div> </li> 
+        <li class="sumary_list modSet"> 
+         <div class="newPic imgSet"> 
+          <a href="cnnew.html?newsid=2541195&amp;_t=1719999476" target="_blank"><img src="images/17199994608472b6ab1da69a1e0ec25ab35ed8df38124.png" alt="mmexport1719999414891" class="News_img"></a> 
+          <div class="zTm" style="margin-top:67%"></div> 
+         </div> 
+         <div class="newCont"> 
+          <div class="newTitle"> 
+           <div class="newName"> 
+            <a class="titleSet newTitle pc" href="cnnew.html?newsid=2541195&amp;_t=1719999476" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              习近平检阅哈萨克斯坦仪仗队
+             </div></a> 
+            <a class="titleSet newTitle pad" href="cnnew.html?newsid=2541195&amp;_t=1719999476" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              习近平检阅哈萨克斯坦仪仗队
+             </div></a> 
+            <a class="titleSet newTitle mobile" href="cnnew.html?newsid=2541195&amp;_t=1719999476" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              习近平检阅哈萨克斯坦仪仗队
+             </div></a> 
+           </div> 
+           <div class="newDetail detailSet pc" style="-webkit-line-clamp: ;">
+            <div class="overhide">
+             当地时间7月3日上午，国家主席习近平在托卡耶夫总统陪同下检阅仪仗...
+            </div>
+           </div> 
+           <div class="newDetail detailSet pad" style="-webkit-line-clamp: ;">
+            <div class="overhide">
+             当地时间7月3日上午，国家主席习近平在托卡耶夫总...
+            </div>
+           </div> 
+           <div class="newDetail detailSet mobile" style="-webkit-line-clamp: ;">
+            <div class="overhide">
+             当地时间7月3日上午，国家主席习近平在托卡耶夫...
+            </div>
+           </div> 
+          </div> 
+          <div class="newB"> 
+           <span class="newSort sortSet">上合动态</span> 
+           <span class="newsTime timesSet"><span class="nDate">2024-07-03</span> <span class="nTime">17:37:55</span></span> 
+          </div> 
+          <div class="show_all"> 
+           <a class="btnaSet" href="cnnew.html?newsid=2541195&amp;_t=1719999476" target="_blank">查看全文</a> 
+          </div> 
+         </div> </li> 
+        <li class="sumary_list modSet"> 
+         <div class="newPic imgSet"> 
+          <a href="cnnew.html?newsid=2541179&amp;_t=1719998988" target="_blank"><img src="images/1719998951576bc21454a2cf0b1d577c20d59ffebd2a2.png" alt="1719998951576bc21454a2cf0b1d577c20d59ffebd2a2" class="News_img"></a> 
+          <div class="zTm" style="margin-top:67%"></div> 
+         </div> 
+         <div class="newCont"> 
+          <div class="newTitle"> 
+           <div class="newName"> 
+            <a class="titleSet newTitle pc" href="cnnew.html?newsid=2541179&amp;_t=1719998988" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              中国国旗色彩带！最高礼仪欢迎...
+             </div></a> 
+            <a class="titleSet newTitle pad" href="cnnew.html?newsid=2541179&amp;_t=1719998988" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              中国国旗色彩带！最高礼仪欢迎...
+             </div></a> 
+            <a class="titleSet newTitle mobile" href="cnnew.html?newsid=2541179&amp;_t=1719998988" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              中国国旗色彩带！最高礼仪欢迎...
+             </div></a> 
+           </div> 
+           <div class="newDetail detailSet pc" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+           <div class="newDetail detailSet pad" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+           <div class="newDetail detailSet mobile" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+          </div> 
+          <div class="newB"> 
+           <span class="newSort sortSet">上合动态</span> 
+           <span class="newsTime timesSet"><span class="nDate">2024-07-03</span> <span class="nTime">17:29:42</span></span> 
+          </div> 
+          <div class="show_all"> 
+           <a class="btnaSet" href="cnnew.html?newsid=2541179&amp;_t=1719998988" target="_blank">查看全文</a> 
+          </div> 
+         </div> </li> 
+        <li class="sumary_list modSet"> 
+         <div class="newPic imgSet"> 
+          <a href="cnnew.html?newsid=2540557&amp;_t=1719942226" target="_blank"><img src="images/171994220075317af5a003cf8f32f459b17aa2ce3b563.png" alt="未命名图片" class="News_img"></a> 
+          <div class="zTm" style="margin-top:67%"></div> 
+         </div> 
+         <div class="newCont"> 
+          <div class="newTitle"> 
+           <div class="newName"> 
+            <a class="titleSet newTitle pc" href="cnnew.html?newsid=2540557&amp;_t=1719942226" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              先声夺人｜西方所不了解的上合...
+             </div></a> 
+            <a class="titleSet newTitle pad" href="cnnew.html?newsid=2540557&amp;_t=1719942226" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              先声夺人｜西方所不了解的上合...
+             </div></a> 
+            <a class="titleSet newTitle mobile" href="cnnew.html?newsid=2540557&amp;_t=1719942226" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              先声夺人｜西方所不了解的上合...
+             </div></a> 
+           </div> 
+           <div class="newDetail detailSet pc" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+           <div class="newDetail detailSet pad" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+           <div class="newDetail detailSet mobile" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+          </div> 
+          <div class="newB"> 
+           <span class="newSort sortSet">上合动态</span> 
+           <span class="newsTime timesSet"><span class="nDate">2024-07-03</span> <span class="nTime">01:43:46</span></span> 
+          </div> 
+          <div class="show_all"> 
+           <a class="btnaSet" href="cnnew.html?newsid=2540557&amp;_t=1719942226" target="_blank">查看全文</a> 
+          </div> 
+         </div> </li> 
+        <li class="sumary_list modSet"> 
+         <div class="newPic imgSet"> 
+          <a href="cnnew.html?newsid=2540517&amp;_t=1719940465" target="_blank"><img src="images/17199410513054cbed44730d5c6b5eee169f86ccd7460.jpeg" alt="08bb126d-0d7a-d5b8-c5e7-82fc031423c7" class="News_img"></a> 
+          <div class="zTm" style="margin-top:67%"></div> 
+         </div> 
+         <div class="newCont"> 
+          <div class="newTitle"> 
+           <div class="newName"> 
+            <a class="titleSet newTitle pc" href="cnnew.html?newsid=2540517&amp;_t=1719940465" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              习近平在哈萨克斯坦媒体发表署...
+             </div></a> 
+            <a class="titleSet newTitle pad" href="cnnew.html?newsid=2540517&amp;_t=1719940465" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              习近平在哈萨克斯坦媒体发表署...
+             </div></a> 
+            <a class="titleSet newTitle mobile" href="cnnew.html?newsid=2540517&amp;_t=1719940465" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              习近平在哈萨克斯坦媒体发表署...
+             </div></a> 
+           </div> 
+           <div class="newDetail detailSet pc" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+           <div class="newDetail detailSet pad" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+           <div class="newDetail detailSet mobile" style="-webkit-line-clamp: ;">
+            <div class="overhide"></div>
+           </div> 
+          </div> 
+          <div class="newB"> 
+           <span class="newSort sortSet">上合动态</span> 
+           <span class="newsTime timesSet"><span class="nDate">2024-07-03</span> <span class="nTime">01:14:25</span></span> 
+          </div> 
+          <div class="show_all"> 
+           <a class="btnaSet" href="cnnew.html?newsid=2540517&amp;_t=1719940465" target="_blank">查看全文</a> 
+          </div> 
+         </div> </li> 
+        <li class="sumary_list modSet"> 
+         <div class="newPic imgSet"> 
+          <a href="cnnew.html?newsid=2540439&amp;_t=1719938909" target="_blank"><img src="images/1719940263253664022ccf998c7aa97989fb48936f21c_25799461078f4c89b3bc08292175e7cc.png" alt="202206141811351080_20240703_17199402632499560" class="News_img"></a> 
+          <div class="zTm" style="margin-top:67%"></div> 
+         </div> 
+         <div class="newCont"> 
+          <div class="newTitle"> 
+           <div class="newName"> 
+            <a class="titleSet newTitle pc" href="cnnew.html?newsid=2540439&amp;_t=1719938909" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              习近平出席上海合作组织成员国...
+             </div></a> 
+            <a class="titleSet newTitle pad" href="cnnew.html?newsid=2540439&amp;_t=1719938909" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              习近平出席上海合作组织成员国...
+             </div></a> 
+            <a class="titleSet newTitle mobile" href="cnnew.html?newsid=2540439&amp;_t=1719938909" target="_blank" style="-webkit-line-clamp: ;">
+             <div class="overhide">
+              习近平出席上海合作组织成员国...
+             </div></a> 
+           </div> 
+           <div class="newDetail detailSet pc" style="-webkit-line-clamp: ;">
+            <div class="overhide">
+             新华社阿斯塔纳7月2日电记者杨依军马峥当地时间7月2日中午，国家...
+            </div>
+           </div> 
+           <div class="newDetail detailSet pad" style="-webkit-line-clamp: ;">
+            <div class="overhide">
+             新华社阿斯塔纳7月2日电记者杨依军马峥当地时间7...
+            </div>
+           </div> 
+           <div class="newDetail detailSet mobile" style="-webkit-line-clamp: ;">
+            <div class="overhide">
+             新华社阿斯塔纳7月2日电记者杨依军马峥当地时间...
+            </div>
+           </div> 
+          </div> 
+          <div class="newB"> 
+           <span class="newSort sortSet">上合动态</span> 
+           <span class="newsTime timesSet"><span class="nDate">2024-07-03</span> <span class="nTime">00:48:29</span></span> 
+          </div> 
+          <div class="show_all"> 
+           <a class="btnaSet" href="cnnew.html?newsid=2540439&amp;_t=1719938909" target="_blank">查看全文</a> 
+          </div> 
+         </div> </li> 
+        <li></li> 
+        <li></li> 
+        <li></li> 
+        <li></li> 
+        <li></li> 
+        <li></li> 
+        <li></li> 
+        <li></li> 
+       </ul> 
+       <div class="page_btn"> 
+        <div class="new_page">
+         <a class="page pageSet new_prev_btn sty04" page="<" href="#newsList_style_04_1690206459448" onclick="RequestURL('newsList_style_04_1690206459448', sys_url_newsList_style_04_1690206459448, 'News_page=1&amp;')">&lt;</a>
+         <a id="pagecurSet" class="page pageSet sty04 cur" href="javascript:;" page="1">1</a>
+         <a class="page pageSet sty04" page="2" href="#newsList_style_04_1690206459448" onclick="RequestURL('newsList_style_04_1690206459448', sys_url_newsList_style_04_1690206459448, 'News_page=2&amp;')">2</a>
+         <a class="page pageSet sty04" page="3" href="#newsList_style_04_1690206459448" onclick="RequestURL('newsList_style_04_1690206459448', sys_url_newsList_style_04_1690206459448, 'News_page=3&amp;')">3</a>
+         <a class="page pageSet sty04" page="4" href="#newsList_style_04_1690206459448" onclick="RequestURL('newsList_style_04_1690206459448', sys_url_newsList_style_04_1690206459448, 'News_page=4&amp;')">4</a>
+         <a class="page pageSet sty04" page="5" href="#newsList_style_04_1690206459448" onclick="RequestURL('newsList_style_04_1690206459448', sys_url_newsList_style_04_1690206459448, 'News_page=5&amp;')">5</a>
+         <a class="page pageSet quick_next sty04" page="···" href="#newsList_style_04_1690206459448" onclick="RequestURL('newsList_style_04_1690206459448', sys_url_newsList_style_04_1690206459448, 'News_page=6&amp;')">···</a>
+         <a class="page pageSet new_next_btn sty04" page=">" href="#newsList_style_04_1690206459448" onclick="RequestURL('newsList_style_04_1690206459448', sys_url_newsList_style_04_1690206459448, 'News_page=2&amp;')">&gt;</a>
+         <div class="submit_div">
+          <span class="all_page">共9页</span>到第 
+          <input type="text" id="page_set" class="page pageSet sty04" value="1"> 页 
+          <span class="page_submit page pageSet sty04" onclick="">确定</span>
+         </div>
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="layout_1685444474134" class="layout   scrollView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+   <div class="view_contents"> 
+   </div> 
+  </div> 
+  <div id="layout_1685444454993" class="layout   scrollView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+   <div class="view_contents"> 
+    <div id="text_style_01_1685444454995" class="view style_01 text  lockHeightView " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+     <div names="text" class="view_contents"> 
+      <script class="editor-view-extend">
+    </script>上合组织成员国 
+     </div> 
+    </div> 
+    <div id="div_blank_new05_1685444455003" class="view blank_new05 div  lockHeightView " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+     <div names="div" class="view_contents"> 
+      <div class="blank_new05 blank_area"> 
+       <div class="roundcs modSet"> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div id="image_style_25_1685444546180" class="view style_25 image  lockHeightView " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+     <div names="image" class="view_contents"> 
+      <div class="imgStyle_25"> 
+       <div class="tab_view"> 
+        <div class="wrap_ul"> 
+         <div class="item modSet normal_item prev" tabkey="0"> 
+          <div class="item_cont "> 
+           <div class="imgTBoxArea"> 
+            <div class="image-box"> 
+             <div class="imgTBox"> 
+              <div class="mengceng picSet"></div> 
+              <img src="images/1689934706769f0013374b2fcfa1130d64edb48b8d836.jpg" class="picSet picFit" alt="514x&amp;version=1689934719"> 
+             </div> 
+            </div> 
+            <div class="ratio" style="margin-top:67%;"></div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="item modSet normal_item prev" tabkey="1"> 
+          <div class="item_cont "> 
+           <div class="imgTBoxArea"> 
+            <div class="image-box"> 
+             <div class="imgTBox"> 
+              <div class="mengceng picSet"></div> 
+              <img src="images/1689934706753b572d23ac56bed1f64644a7188d7dabe.jpg" class="picSet picFit" alt="514x&amp;version=1689934720"> 
+             </div> 
+            </div> 
+            <div class="ratio" style="margin-top:67%;"></div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="item modSet center_item" tabkey="2"> 
+          <div class="item_cont "> 
+           <div class="imgTBoxArea"> 
+            <div class="image-box"> 
+             <div class="imgTBox"> 
+              <div class="mengceng picSet"></div> 
+              <img src="images/1689934706315d69356b86e3dd6813fca968996c62e9c.jpg" class="picSet picFit" alt="514x&amp;version=1689934720"> 
+             </div> 
+            </div> 
+            <div class="ratio" style="margin-top:67%;"></div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="item modSet normal_item next" tabkey="3"> 
+          <div class="item_cont "> 
+           <div class="imgTBoxArea"> 
+            <div class="image-box"> 
+             <div class="imgTBox"> 
+              <div class="mengceng picSet"></div> 
+              <img src="images/1689934706782c13dceabcb143acd6c9298265d618a9f.jpg" class="picSet picFit" alt="514x&amp;version=1689934720"> 
+             </div> 
+            </div> 
+            <div class="ratio" style="margin-top:67%;"></div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="item modSet normal_item next" tabkey="4"> 
+          <div class="item_cont "> 
+           <div class="imgTBoxArea"> 
+            <div class="image-box"> 
+             <div class="imgTBox"> 
+              <div class="mengceng picSet"></div> 
+              <img src="images/1689934706352d5abe70510a9e60d531dc390f2d85f7e.jpg" class="picSet picFit" alt="514x&amp;version=1689934719"> 
+             </div> 
+            </div> 
+            <div class="ratio" style="margin-top:67%;"></div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="item modSet hide_item" tabkey="5"> 
+          <div class="item_cont "> 
+           <div class="imgTBoxArea"> 
+            <div class="image-box"> 
+             <div class="imgTBox"> 
+              <div class="mengceng picSet"></div> 
+              <img src="images/16899347062709201e53687b3898204788418d6634aa2.jpg" class="picSet picFit" alt="514x&amp;version=1689934720"> 
+             </div> 
+            </div> 
+            <div class="ratio" style="margin-top:67%;"></div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="item modSet hide_item" tabkey="6"> 
+          <div class="item_cont "> 
+           <div class="imgTBoxArea"> 
+            <div class="image-box"> 
+             <div class="imgTBox"> 
+              <div class="mengceng picSet"></div> 
+              <img src="images/16899347063047eac3d4db8d7a5a3443c322ab4e33881.jpg" class="picSet picFit" alt="514x&amp;version=1689934719"> 
+             </div> 
+            </div> 
+            <div class="ratio" style="margin-top:67%;"></div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="item modSet hide_item" tabkey="7"> 
+          <div class="item_cont "> 
+           <div class="imgTBoxArea"> 
+            <div class="image-box"> 
+             <div class="imgTBox"> 
+              <div class="mengceng picSet"></div> 
+              <img src="images/1689934706312f4554825109e968cfeabc71e56d48916.jpg" class="picSet picFit" alt="514x&amp;version=1689934719"> 
+             </div> 
+            </div> 
+            <div class="ratio" style="margin-top:67%;"></div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="item modSet hide_item" tabkey="8"> 
+          <div class="item_cont "> 
+           <div class="imgTBoxArea"> 
+            <div class="image-box"> 
+             <div class="imgTBox"> 
+              <div class="mengceng picSet"></div> 
+              <img src="images/1689934706296ad85c7299c78491d15c08b3dd226f9bc.jpg" class="picSet picFit" alt="514x&amp;version=1689934719"> 
+             </div> 
+            </div> 
+            <div class="ratio" style="margin-top:67%;"></div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="item modSet hide_item" tabkey="9"> 
+          <div class="item_cont "> 
+           <div class="imgTBoxArea"> 
+            <div class="image-box"> 
+             <div class="imgTBox"> 
+              <div class="mengceng picSet"></div> 
+              <img src="images/1720000010314e58c390ad9ba8d70f12d3ee2f7c1dfbd.png" class="picSet picFit" alt="b83b38b40455f0b2847d6161d115394"> 
+             </div> 
+            </div> 
+            <div class="ratio" style="margin-top:67%;"></div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="item modSet hide_item" tabkey="10"> 
+          <div class="item_cont "> 
+           <div class="imgTBoxArea"> 
+            <div class="image-box"> 
+             <div class="imgTBox"> 
+              <div class="mengceng picSet"></div> 
+              <img src="images/1689934706769f0013374b2fcfa1130d64edb48b8d836.jpg" class="picSet picFit" alt="514x&amp;version=1689934719"> 
+             </div> 
+            </div> 
+            <div class="ratio" style="margin-top:67%;"></div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="item modSet hide_item" tabkey="11"> 
+          <div class="item_cont "> 
+           <div class="imgTBoxArea"> 
+            <div class="image-box"> 
+             <div class="imgTBox"> 
+              <div class="mengceng picSet"></div> 
+              <img src="images/1689934706753b572d23ac56bed1f64644a7188d7dabe.jpg" class="picSet picFit" alt="514x&amp;version=1689934720"> 
+             </div> 
+            </div> 
+            <div class="ratio" style="margin-top:67%;"></div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="item modSet hide_item" tabkey="12"> 
+          <div class="item_cont "> 
+           <div class="imgTBoxArea"> 
+            <div class="image-box"> 
+             <div class="imgTBox"> 
+              <div class="mengceng picSet"></div> 
+              <img src="images/1689934706315d69356b86e3dd6813fca968996c62e9c.jpg" class="picSet picFit" alt="514x&amp;version=1689934720"> 
+             </div> 
+            </div> 
+            <div class="ratio" style="margin-top:67%;"></div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="item modSet hide_item" tabkey="13"> 
+          <div class="item_cont "> 
+           <div class="imgTBoxArea"> 
+            <div class="image-box"> 
+             <div class="imgTBox"> 
+              <div class="mengceng picSet"></div> 
+              <img src="images/1689934706782c13dceabcb143acd6c9298265d618a9f.jpg" class="picSet picFit" alt="514x&amp;version=1689934720"> 
+             </div> 
+            </div> 
+            <div class="ratio" style="margin-top:67%;"></div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="item modSet hide_item" tabkey="14"> 
+          <div class="item_cont "> 
+           <div class="imgTBoxArea"> 
+            <div class="image-box"> 
+             <div class="imgTBox"> 
+              <div class="mengceng picSet"></div> 
+              <img src="images/1689934706352d5abe70510a9e60d531dc390f2d85f7e.jpg" class="picSet picFit" alt="514x&amp;version=1689934719"> 
+             </div> 
+            </div> 
+            <div class="ratio" style="margin-top:67%;"></div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="item modSet hide_item" tabkey="15"> 
+          <div class="item_cont "> 
+           <div class="imgTBoxArea"> 
+            <div class="image-box"> 
+             <div class="imgTBox"> 
+              <div class="mengceng picSet"></div> 
+              <img src="images/16899347062709201e53687b3898204788418d6634aa2.jpg" class="picSet picFit" alt="514x&amp;version=1689934720"> 
+             </div> 
+            </div> 
+            <div class="ratio" style="margin-top:67%;"></div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="item modSet hide_item" tabkey="16"> 
+          <div class="item_cont "> 
+           <div class="imgTBoxArea"> 
+            <div class="image-box"> 
+             <div class="imgTBox"> 
+              <div class="mengceng picSet"></div> 
+              <img src="images/16899347063047eac3d4db8d7a5a3443c322ab4e33881.jpg" class="picSet picFit" alt="514x&amp;version=1689934719"> 
+             </div> 
+            </div> 
+            <div class="ratio" style="margin-top:67%;"></div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="item modSet hide_item" tabkey="17"> 
+          <div class="item_cont "> 
+           <div class="imgTBoxArea"> 
+            <div class="image-box"> 
+             <div class="imgTBox"> 
+              <div class="mengceng picSet"></div> 
+              <img src="images/1689934706312f4554825109e968cfeabc71e56d48916.jpg" class="picSet picFit" alt="514x&amp;version=1689934719"> 
+             </div> 
+            </div> 
+            <div class="ratio" style="margin-top:67%;"></div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="item modSet hide_item" tabkey="18"> 
+          <div class="item_cont "> 
+           <div class="imgTBoxArea"> 
+            <div class="image-box"> 
+             <div class="imgTBox"> 
+              <div class="mengceng picSet"></div> 
+              <img src="images/1689934706296ad85c7299c78491d15c08b3dd226f9bc.jpg" class="picSet picFit" alt="514x&amp;version=1689934719"> 
+             </div> 
+            </div> 
+            <div class="ratio" style="margin-top:67%;"></div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="item modSet hide_item" tabkey="19"> 
+          <div class="item_cont "> 
+           <div class="imgTBoxArea"> 
+            <div class="image-box"> 
+             <div class="imgTBox"> 
+              <div class="mengceng picSet"></div> 
+              <img src="images/1720000010314e58c390ad9ba8d70f12d3ee2f7c1dfbd.png" class="picSet picFit" alt="b83b38b40455f0b2847d6161d115394"> 
+             </div> 
+            </div> 
+            <div class="ratio" style="margin-top:67%;"></div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="controls_icon prev_icon arrowSet">
+         <i class="fa fa-angle-left awesome-font"></i>
+         <span class="text-font">&lt;</span>
+        </div> 
+        <div class="controls_icon next_icon arrowSet">
+         <i class="fa fa-angle-right awesome-font"></i>
+         <span class="text-font">&gt;</span>
+        </div> 
+       </div> 
+       <div class="cont_view"> 
+        <div class="cont_item" contkey="0"> 
+         <a href="http://in.mofcom.gov.cn" target="_self" style="display: block;"> 
+          <div class="name titProSet">
+           印度
+          </div> </a> 
+        </div> 
+        <div class="cont_item" contkey="1"> 
+         <a href="http://ir.mofcom.gov.cn/" target="_blank" style="display: block;"> 
+          <div class="name titProSet">
+           伊朗
+          </div> </a> 
+        </div> 
+        <div class="cont_item center_cont" contkey="2"> 
+         <a href="http://kz.mofcom.gov.cn" target="_self" style="display: block;"> 
+          <div class="name titProSet">
+           哈萨克斯坦
+          </div> </a> 
+        </div> 
+        <div class="cont_item" contkey="3"> 
+         <a href="http://www.mofcom.gov.cn" target="_self" style="display: block;"> 
+          <div class="name titProSet">
+           中国
+          </div> </a> 
+        </div> 
+        <div class="cont_item" contkey="4"> 
+         <a href="http://kg.mofcom.gov.cn" target="_self" style="display: block;"> 
+          <div class="name titProSet">
+           吉尔吉斯斯坦
+          </div> </a> 
+        </div> 
+        <div class="cont_item" contkey="5"> 
+         <a href="http://pk.mofcom.gov.cn" target="_self" style="display: block;"> 
+          <div class="name titProSet">
+           巴基斯坦
+          </div> </a> 
+        </div> 
+        <div class="cont_item" contkey="6"> 
+         <a href="http://ru.mofcom.gov.cn" target="_self" style="display: block;"> 
+          <div class="name titProSet">
+           俄罗斯
+          </div> </a> 
+        </div> 
+        <div class="cont_item" contkey="7"> 
+         <a href="http://tj.mofcom.gov.cn" target="_self" style="display: block;"> 
+          <div class="name titProSet">
+           塔吉克斯坦
+          </div> </a> 
+        </div> 
+        <div class="cont_item" contkey="8"> 
+         <a href="http://uz.mofcom.gov.cn" target="_self" style="display: block;"> 
+          <div class="name titProSet">
+           乌兹别克斯坦
+          </div> </a> 
+        </div> 
+        <div class="cont_item" contkey="9"> 
+         <a style="cursor:default;display: block;"> 
+          <div class="name titProSet">
+           栏目标题
+          </div> </a> 
+        </div> 
+        <div class="cont_item" contkey="10"> 
+         <a href="http://in.mofcom.gov.cn" target="_self" style="display: block;"> 
+          <div class="name titProSet">
+           印度
+          </div> </a> 
+        </div> 
+        <div class="cont_item" contkey="11"> 
+         <a href="http://ir.mofcom.gov.cn/" target="_blank" style="display: block;"> 
+          <div class="name titProSet">
+           伊朗
+          </div> </a> 
+        </div> 
+        <div class="cont_item" contkey="12"> 
+         <a href="http://kz.mofcom.gov.cn" target="_self" style="display: block;"> 
+          <div class="name titProSet">
+           哈萨克斯坦
+          </div> </a> 
+        </div> 
+        <div class="cont_item" contkey="13"> 
+         <a href="http://www.mofcom.gov.cn" target="_self" style="display: block;"> 
+          <div class="name titProSet">
+           中国
+          </div> </a> 
+        </div> 
+        <div class="cont_item" contkey="14"> 
+         <a href="http://kg.mofcom.gov.cn" target="_self" style="display: block;"> 
+          <div class="name titProSet">
+           吉尔吉斯斯坦
+          </div> </a> 
+        </div> 
+        <div class="cont_item" contkey="15"> 
+         <a href="http://pk.mofcom.gov.cn" target="_self" style="display: block;"> 
+          <div class="name titProSet">
+           巴基斯坦
+          </div> </a> 
+        </div> 
+        <div class="cont_item" contkey="16"> 
+         <a href="http://ru.mofcom.gov.cn" target="_self" style="display: block;"> 
+          <div class="name titProSet">
+           俄罗斯
+          </div> </a> 
+        </div> 
+        <div class="cont_item" contkey="17"> 
+         <a href="http://tj.mofcom.gov.cn" target="_self" style="display: block;"> 
+          <div class="name titProSet">
+           塔吉克斯坦
+          </div> </a> 
+        </div> 
+        <div class="cont_item" contkey="18"> 
+         <a href="http://uz.mofcom.gov.cn" target="_self" style="display: block;"> 
+          <div class="name titProSet">
+           乌兹别克斯坦
+          </div> </a> 
+        </div> 
+        <div class="cont_item" contkey="19"> 
+         <a style="cursor:default;display: block;"> 
+          <div class="name titProSet">
+           栏目标题
+          </div> </a> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="layout_1685445675795" class="layout   scrollView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+   <div class="view_contents"> 
+    <div id="text_style_01_1685445675798" class="view style_01 text  lockHeightView " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+     <div names="text" class="view_contents"> 
+      <script class="editor-view-extend">
+    </script>友情链接 
+     </div> 
+    </div> 
+    <div id="div_blank_new05_1685445675803" class="view blank_new05 div  lockHeightView " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+     <div names="div" class="view_contents"> 
+      <div class="blank_new05 blank_area"> 
+       <div class="roundcs modSet"> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div id="banner_style_04_1685445759436" class="view style_04 banner  " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+     <div names="banner" class="view_contents"> 
+      <div class="bannerStyle_4"> 
+       <div class="imgMove" id="banner_style_04_1685445759436imgMove"> 
+        <div class="subMove"> 
+         <ul id="banner_style_04_1685445759436itemOne"> 
+          <li class="list_mode picSet" onclick=""> <a class="a_mode" href="http://chn.sectsco.org" target="_blank"> <img src="images/168603865013869559e8b1c92e99f.jpg" alt="01"> </a> </li> 
+          <li class="list_mode picSet" onclick=""> <a class="a_mode" href="https://www.fmprc.gov.cn/" target="_self"> <img src="images/1687141223732788b622c9d155371.jpg" alt="x50&amp;version=0"> </a> </li> 
+          <li class="list_mode picSet" onclick=""> <a class="a_mode" href="https://www.miit.gov.cn/" target="_self"> <img src="images/1687141223731c2a02608cd5ea51b.jpg" alt="x50&amp;version=0"> </a> </li> 
+          <li class="list_mode picSet" onclick=""> <a class="a_mode" href="http://www.cecc.org.cn" target="_blank"> <img src="images/1686038650140afe8714a7e5d13ee.jpg" alt="02"> </a> </li> 
+          <li class="list_mode picSet" onclick=""> <a class="a_mode" href="https://www.ncsti.gov.cn/kjdt/scyq/bjjjjskfq/index.html" target="_blank"> <img src="images/1686038650141719c4e8bc6a39e94.jpg" alt="03"> </a> </li> 
+          <li class="list_mode picSet" onclick=""> <a class="a_mode" href="https://www.scoda.com/" target="_self"> <img src="images/1685445952246373c23617fcc5af3.jpg" alt="x50&amp;version=1686475179"> </a> </li> 
+         </ul> 
+         <ul id="banner_style_04_1685445759436itemTwo"></ul> 
+         <ul id="banner_style_04_1685445759436itemThree"></ul> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="comm_layout_footer" class="layout   scrollView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+   <div class="view_contents"> 
+    <div id="div_blank_new01_1705331600462" class="view blank_new01 div  " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+     <div names="div" class="view_contents"> 
+      <script class="editor-view-extend">
+    </script>
+      <div class="blank_new01"> 
+       <div class="roundcs modSet"></div> 
+      </div> 
+     </div> 
+    </div> 
+    <div id="copyright_style_01_1705331600465" class="view style_01 copyright  lockHeightView " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+     <div names="copyright" class="view_contents"> 
+      <div class="copyrightStyle01 modSet"> 
+       <div class="copyright_view line_view">
+        Copyright @ 2023-2026 SCODTP All rights reserved.
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div id="div_a_includeBlock_1705331651164" class="view a_includeBlock div  includeView " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+     <div names="div" class="view_contents"> 
+      <div id="div_a_includeBlock_1705331651488" class="view a_includeBlock div  includeView " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+       <div names="div" class="view_contents"> 
+        <div id="text_style_01_1705331651603" class="view style_01 text  lockHeightView " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+         <div names="text" class="view_contents"> 
+          <script class="editor-view-extend">
+    </script>电话：+86-010-8444 7666
+          <div>
+           邮箱：scodtp@scodtp.org.cn
+           <div>
+            地址：北京市朝阳区二十一世纪大厦A座三层
+           </div>
+          </div> 
+         </div> 
+        </div> 
+        <div id="titleText_style_05_1705331651608" class="view style_05 titleText  lockHeightView " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+         <div names="titleText" class="view_contents"> 
+          <script class="editor-view-extend">
+    </script>
+          <div class="titleStyle_5 modSet"> 
+           <div class="view_cont"> 
+            <div class="titletop bigtitsSet">
+             上海合作组织国家数字科技平台工作委员会 
+            </div> 
+            <div class="line_view"> 
+             <div class="line linelong lineshapesecSet"></div> 
+             <div class="line lineshort lineshapeSet"></div> 
+            </div> 
+           </div> 
+          </div> 
+          <!-- // 链接数据处理  开始↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ --> 
+          <!-- // 链接数据处理  结束↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ --> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div id="div_a_includeBlock_1705331651493" class="view a_includeBlock div  includeView " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+       <div names="div" class="view_contents"> 
+        <div id="titleText_style_05_1705331651989" class="view style_05 titleText  lockHeightView " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+         <div names="titleText" class="view_contents"> 
+          <script class="editor-view-extend">
+    </script>
+          <div class="titleStyle_5 modSet"> 
+           <div class="view_cont"> 
+            <div class="titletop bigtitsSet">
+             快速导航 
+            </div> 
+            <div class="line_view"> 
+             <div class="line linelong lineshapesecSet"></div> 
+             <div class="line lineshort lineshapeSet"></div> 
+            </div> 
+           </div> 
+          </div> 
+          <!-- // 链接数据处理  开始↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ --> 
+          <!-- // 链接数据处理  结束↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ --> 
+         </div> 
+        </div> 
+        <div id="footerCustom_footerDh_01_1705331651994" class="view footerDh_01 footerCustom  lockHeightView " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+         <div names="footerCustom" class="view_contents"> 
+          <div id="menu" class="menu footerCustom_01"> 
+           <div class="menuLayout"> 
+            <div class="menuUl_box columnSet dhAreaSet showpc"> 
+             <ul class="menuUl dflex maxWidth "> 
+              <li class="rflex isLi" pageid="611989" showpc=""> <a class="mainMenuSet Onsub" href="about_scodtp.html"> 关于平台 </a> </li> 
+              <li class="rflex isLi" pageid="612029" showpc=""> <a class="mainMenuSet Onsub" href="KnowSCO.html"> 了解上合 </a> </li> 
+              <li class="rflex isLi" pageid="612021" showpc=""> <a class="mainMenuSet Onsub" href="NewsCenter.html"> 新闻中心 </a> </li> 
+              <li class="rflex isLi" pageid="612039" showpc=""> <a class="mainMenuSet Onsub" href="PlatformActivities.html"> 平台活动 </a> </li> 
+              <li class="rflex isLi" pageid="612009" showpc=""> <a class="mainMenuSet Nosub" href="ThinkTank.html"> 平台智库 </a> </li> 
+              <li class="rflex isLi" pageid="611895" showpc=""> <a class="mainMenuSet Nosub" href="contact_us.html"> 联系我们 </a> </li> 
+             </ul> 
+            </div> 
+            <div class="menuUl_box columnSet dhAreaSet showmobile"> 
+             <ul class="menuUl dflex maxWidth "> 
+             </ul> 
+            </div> 
+           </div> 
+          </div> 
+          <!-- 导航栏目有下级时禁止跳转 --> 
+          <!-- 每行显示列数 --> 
+          <!--  --> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div id="div_a_includeBlock_1705331651496" class="view a_includeBlock div  includeView " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+       <div names="div" class="view_contents"> 
+        <div id="titleText_style_05_1705331651739" class="view style_05 titleText  lockHeightView " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+         <div names="titleText" class="view_contents"> 
+          <script class="editor-view-extend">
+    </script>
+          <div class="titleStyle_5 modSet"> 
+           <div class="view_cont"> 
+            <div class="titletop bigtitsSet">
+             关注我们 
+            </div> 
+            <div class="line_view"> 
+             <div class="line linelong lineshapesecSet"></div> 
+             <div class="line lineshort lineshapeSet"></div> 
+            </div> 
+           </div> 
+          </div> 
+          <!-- // 链接数据处理  开始↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ --> 
+          <!-- // 链接数据处理  结束↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ --> 
+         </div> 
+        </div> 
+        <div id="image_style_22_1705331651744" class="view style_22 image  lockHeightView " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1"> 
+         <div names="image" class="view_contents"> 
+          <!-- modSet titleSet imgSet detailSet-->
+          <!-- pageSet pagecurSet --> 
+          <div class="imgStyle_22"> 
+           <input type="hidden" id="current_page_1705331651744" value="2"> 
+           <input type="hidden" id="show_per_page_1705331651744" value="12"> 
+           <ul class="imgTextUl" id="content_1705331651744"> 
+            <li class="imgTextLi modSet"> 
+             <div class="left"> 
+              <div class="image-box"> 
+               <a style="cursor:default;"> 
+                <div class="imgTBox"> 
+                 <img src="images/1702117776503215feec56c2ae2ebc5c15e0bf7baf63b.png" class="imgSet" alt="191x&amp;version=0"> 
+                </div> </a> 
+              </div> 
+              <div class="ratio" style="margin-top:100%;"></div> 
+             </div> 
+             <div class="cont"> 
+              <div class="title"> 
+               <div class="name titleSet">
+                公众号
+               </div> 
+              </div> 
+              <div class="imgDetail detailSet"></div> 
+             </div> </li> 
+            <li class="imgTextLi modSet"> 
+             <div class="left"> 
+              <div class="image-box"> 
+               <a style="cursor:default;"> 
+                <div class="imgTBox"> 
+                 <img src="images/170211777667020f8a100f9ae126a9a5368b2d047739b.png" class="imgSet" alt="191x&amp;version=1702117779"> 
+                </div> </a> 
+              </div> 
+              <div class="ratio" style="margin-top:100%;"></div> 
+             </div> 
+             <div class="cont"> 
+              <div class="title"> 
+               <div class="name titleSet">
+                视频号
+               </div> 
+              </div> 
+              <div class="imgDetail detailSet"></div> 
+             </div> </li> 
+            <li></li> 
+            <li></li> 
+            <li></li> 
+            <li></li> 
+            <li></li> 
+            <li></li> 
+            <li></li> 
+           </ul> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <script type="text/javascript" src="js/0611877_model.js" charset="utf-8"></script> 
+  <script>
+	$(function(){
+		sendBatch(batchArr);
+	});
+</script> 
+  <script type="text/javascript" src="js/0611877_user.js" charset="utf-8"></script> 
+  <script type="text/javascript" src="js/comm_user.js" charset="utf-8"></script> 
+  <script type="text/javascript" src="js/js.js" charset="utf-8"></script> 
+  <script>var _paq = _paq || [];_paq.push(["trackPageView"]);_paq.push(["enableLinkTracking"]);window.onload = function(){var u=(("https:" == document.location.protocol) ? "https" : "http") + "://tj.nicebox.cn//";_paq.push(["setTrackerUrl", u+"piwik.php"]);_paq.push(["setSiteId", 29458]);var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";g.defer=true; g.async=true; g.src=u+"website.js"; s.parentNode.insertBefore(g,s);}</script> 
+  <script type="text/javascript" src="js/transform_7b6d152bb8b44197ab4e4b1d53ac02a4.js"></script>   
+ </body>
+</html>
